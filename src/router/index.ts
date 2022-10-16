@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 // Views
 import Home from "../views/Home.vue";
+import SuakoDownload from "../views/Projects/SuakoDownload.vue";
 
 const routes: any = [
   {
@@ -9,10 +10,15 @@ const routes: any = [
     name: "Home",
     component: Home,
   },
+  {
+    path: "/suako-download",
+    name: "Suako Download",
+    component: SuakoDownload,
+  },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 
